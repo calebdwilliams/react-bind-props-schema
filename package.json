@@ -1,0 +1,63 @@
+{
+  "name": "react-bind-properties-schema",
+  "version": "1.0.0",
+  "description": "Add native property bindings to React for use with custom elements",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master; npm publish"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^8.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "lit-element": "^2.4.0",
+    "nwb": "^0.25.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "standard-version": "^8.0.1"
+  },
+  "author": "Caleb D. Williams <caleb.d.williams@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calebdwilliams/react-bind-props-schema.git"
+  },
+  "keywords": [
+    "react-component",
+    "jsx",
+    "dom-properties",
+    "native properties",
+    "dom",
+    "react",
+    "react-dom",
+    "web components",
+    "webcomponents",
+    "custom elements",
+    "customElements",
+    "shadowDOM"
+  ]
+}
