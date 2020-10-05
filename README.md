@@ -6,7 +6,22 @@
 
 This module exports a React schema to add proprty bindings to DOM nodes in React applications. This is especially useful for working with custom elements, many of which may take complex data inputs.
 
-This JSX pragma allows users to bind to the property on a DOM node using the `bindProps` React prop. This new prop takes an object where the each key is treated as a DOM node property and each value is bound to that value. As an example, the two code snippets peform the same task the first in Angular and the second in React:
+This JSX pragma allows users to bind to the property on a DOM node using the `bindProps` React prop. This new prop takes an object where the each key is treated as a DOM node property and each value is bound to that value. As an example, the two code snippets peform the same task the first in React and the second in Angular:
+
+### React example with this package
+
+```jsx
+/** @jsx bindProps */
+import bindProps from 'react-bind-properties'
+
+export function MyComponent () {
+    const list = ['one', 'two', 'three']
+
+    return <custom-element bindProps={{ list }}></custom-element>
+}
+```
+
+### Code equivalent in Angular
 
 ```typescript
 import { Component } from '@angular/core';
@@ -19,27 +34,14 @@ export class MyComponent {
 }
 ```
 
-and in React:
-
-```jsx
-/** @jsx bindProps */
-import bindProps from 'react-bind-properties-schema'
-
-export function MyComponent () {
-    const list = ['one', 'two', 'three']
-
-    return <custom-element bindProps={{ list }}></custom-element>
-}
-```
-
-## Installing
+## Installation
 
 The recommended installation method of this package is through [npm](http://npmjs.com). If you are unfamiliar with the npm ecosystem, there is some great [documentation available on the npm website](https://docs.npmjs.com/cli/install).
 
 If you are familiar with npm, you can install this package using the command
 
 ```bash
-npm i -D react-bind-properties-schema
+npm i -D react-bind-properties
 ```
 
 ## Usage
